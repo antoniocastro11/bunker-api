@@ -8,7 +8,8 @@ import { IdeaDto } from './dto/idea.dto';
 export class  IdeaService {
   constructor(private prisma: PrismaService) {}
 
-async createIdea(data: IdeaDto) {
+  @ApiOperation({ summary: 'Cria nova idea' })
+  async createIdea(data: IdeaDto) {
   const idea = await this.prisma.idea.create({
     data
   });
