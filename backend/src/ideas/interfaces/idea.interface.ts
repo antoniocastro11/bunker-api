@@ -1,8 +1,14 @@
 export interface Idea {
     title: string;
     description: string;
-    stack: string;
+    status: Status;
     type: IdeaType;
+}
+
+export enum Status {
+    Completed = "Completed",
+    InProgress = "InProgress",
+    Stopped = "Stopped",
 }
 
 export enum IdeaType {

@@ -1,9 +1,7 @@
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
   output   = "../generated/prisma"
-  moduleFormat = "cjs"
 }
-
 datasource db {
   provider = "postgresql"
 }
@@ -12,8 +10,8 @@ model Idea {
   id          Int      @id @default(autoincrement())
   title       String
   description String?
-  stack       String?
   ideaType    IdeaType?
+  status      Status?
   createdAt   DateTime @default(now())
   userId      Int
   user        User     @relation(fields: [userId], references: [id])
@@ -24,6 +22,12 @@ enum IdeaType {
   MobileApp
   Game
   Automation
+}
+
+enum Status {
+  Completed
+  InProgress
+  Stopped
 }
 
 

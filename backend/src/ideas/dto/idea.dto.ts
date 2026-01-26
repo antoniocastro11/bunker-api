@@ -1,6 +1,5 @@
-import { IdeaType } from "@prisma/client";
 import {  IsOptional, IsString } from "class-validator";
-
+import { IdeaType, Status } from "generated/prisma";
 export class IdeaDto {
     @IsString()
     title: string;
@@ -9,8 +8,7 @@ export class IdeaDto {
     description: string;
 
     @IsOptional()
-    @IsString()
-    stack?: string;
+    status?: Status;
 
     @IsOptional()
     ideaType?: IdeaType;
