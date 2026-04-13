@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ideaBunker.API/ideaBunker.API.csproj" />
+  <Project Path="ideaBunker.Application/ideaBunker.Application.csproj" />
+  <Project Path="ideaBunker.Domain/ideaBunker.Domain.csproj" />
+  <Project Path="ideaBunker.Infrastructure/ideaBunker.Infrastructure.csproj" />
+</Solution>

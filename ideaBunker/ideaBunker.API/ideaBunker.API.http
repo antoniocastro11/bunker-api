@@ -1,0 +1,6 @@
+@ideaBunker.API_HostAddress = http://localhost:5130
+
+GET {{ideaBunker.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
